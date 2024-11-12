@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="function.js"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      /* Estilos personalizados para colores adicionales */
+      .btn-brown { background-color: #8B4513; color: white; }
+      .btn-orange { background-color: #FFA500; color: white; }
+      .btn-purple { background-color: #800080; color: white; }
+      .btn-white { background-color: #FFFFFF; color: black; border: 1px solid #ccc; }
+      .btn-gold { background-color: #FFD700; color: black; }
+      .btn-silver { background-color: #C0C0C0; color: black; }
+
+      /* Estilos personalizados para los colores seleccionados */
+      .badge-brown { background-color: #8B4513; color: white; }
+      .badge-orange { background-color: #FFA500; color: white; }
+      .badge-purple { background-color: #800080; color: white; }
+      .badge-white { background-color: #FFFFFF; color: black; border: 1px solid #ccc; }
+      .badge-gold { background-color: #FFD700; color: black; }
+      .badge-silver { background-color: #C0C0C0; color: black; }
+    </style>
+</head>
+<body>
+<div class="card text-center">
+  <div class="card-header" style="margin-left: 0px; margin-right: 0px;">
+    <h1>Resistencia 4 o 5 bandas :</h1>
+  </div>
+  <div class="card-body" style="margin:0px;">
+    <!-- Contenedor de imágenes en una sola fila -->
+    <div class="d-flex flex-wrap justify-content-center align-items-center"">
+        <img src="inicio.jpeg" style="width: 100px; height: 50px;">
+        
+        <!-- Contenedor para los colores seleccionados principales, centrado -->
+        <div id="selected-colors" class="d-flex justify-content-center mx-3" style="height: 60px;">
+          <!-- Aquí se mostrarán los colores seleccionados -->
+        </div>
+        
+        <img src="final.jpeg" style="width: 100px; height: 50px;">
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    <!-- Botones de colores -->
+    <button type="button" class="btn btn-dark" onclick="addColor(',', 'badge bg-dark', 0)">Negro</button>
+    <button type="button" class="btn btn-brown" onclick="addColor(',', 'badge badge-brown', 1)">Marrón</button>
+    <button type="button" class="btn btn-danger" onclick="addColor(',', 'badge bg-danger', 2)">Rojo</button>
+    <button type="button" class="btn btn-orange" onclick="addColor(',', 'badge badge-orange', 3)">Naranja</button>
+    <button type="button" class="btn btn-warning" onclick="addColor(',', 'badge bg-warning', 4)">Amarillo</button>
+    <button type="button" class="btn btn-success" onclick="addColor(',', 'badge bg-success', 5)">Verde</button>
+    <button type="button" class="btn btn-primary" onclick="addColor(',', 'badge bg-primary', 6)">Azul</button>
+    <button type="button" class="btn btn-purple" onclick="addColor(',', 'badge badge-purple', 7)">Violeta</button>
+    <button type="button" class="btn btn-secondary" onclick="addColor(',', 'badge bg-secondary', 8)">Gris</button>
+    <button type="button" class="btn btn-white" onclick="addColor(',', 'badge badge-white', 9)">Blanco</button>
+    <button type="button" class="btn btn-gold" onclick="addTolerance(',', 'badge badge-gold', 5)">Oro</button>
+    <button type="button" class="btn btn-silver" onclick="addTolerance(',', 'badge badge-silver', 10)">Plata</button>
+
+    <!-- Icono SVG para eliminar el último color seleccionado -->
+    <svg onclick="removeLastColor()" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+      <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+    </svg>
+  </div>
+  <!-- Fila para mostrar el resultado de la resistencia -->
+  <div class="card-body">
+    <h2>Valor de la Resistencia: <span id="resistance-value">0 Ω</span></h2>
+    <h2>Tolerancia: <span id="tolerance-value">N/A</span></h2>
+  </div>
+</div>
+</body>
+</html>
