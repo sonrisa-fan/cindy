@@ -22,9 +22,9 @@
     </style>
 </head>
 <body>
-<div class="card text-center">
-  <div class="card-header" style="margin-left: 0px; margin-right: 0px;">
-    <h1>Resistencia 4 o 5 bandas :</h1>
+<div class="card text-center" >
+  <div class="card-header" style="margin-left: 0px; margin-right: 0px; background-color: #000000; border-radius: 100000px">
+    <h1 style="color:#FFFFFF">Resistencia 4 o 5 bandas :</h1>
   </div>
   <div class="card-body" style="margin:0px;">
     <!-- Contenedor de imágenes en una sola fila -->
@@ -41,18 +41,18 @@
   </div>
   <div class="card-footer text-muted">
     <!-- Botones de colores -->
-    <button type="button" class="btn btn-dark" onclick="addColor(',', 'badge bg-dark', 0)">Negro</button>
-    <button type="button" class="btn btn-brown" onclick="addColor(',', 'badge badge-brown', 1)">Marrón</button>
-    <button type="button" class="btn btn-danger" onclick="addColor(',', 'badge bg-danger', 2)">Rojo</button>
-    <button type="button" class="btn btn-orange" onclick="addColor(',', 'badge badge-orange', 3)">Naranja</button>
-    <button type="button" class="btn btn-warning" onclick="addColor(',', 'badge bg-warning', 4)">Amarillo</button>
-    <button type="button" class="btn btn-success" onclick="addColor(',', 'badge bg-success', 5)">Verde</button>
-    <button type="button" class="btn btn-primary" onclick="addColor(',', 'badge bg-primary', 6)">Azul</button>
-    <button type="button" class="btn btn-purple" onclick="addColor(',', 'badge badge-purple', 7)">Violeta</button>
-    <button type="button" class="btn btn-secondary" onclick="addColor(',', 'badge bg-secondary', 8)">Gris</button>
-    <button type="button" class="btn btn-white" onclick="addColor(',', 'badge badge-white', 9)">Blanco</button>
-    <button type="button" class="btn btn-gold" onclick="addTolerance(',', 'badge badge-gold', 5)">Oro</button>
-    <button type="button" class="btn btn-silver" onclick="addTolerance(',', 'badge badge-silver', 10)">Plata</button>
+    <button type="button" class="btn btn-dark" onclick="addColor('| ', 'badge bg-dark', 0)">Negro</button>
+    <button type="button" class="btn btn-brown" onclick="addColor('| ', 'badge badge-brown', 1)">Marrón</button>
+    <button type="button" class="btn btn-danger" onclick="addColor('|', 'badge bg-danger', 2)">Rojo</button>
+    <button type="button" class="btn btn-orange" onclick="addColor('|', 'badge badge-orange', 3)">Naranja</button>
+    <button type="button" class="btn btn-warning" onclick="addColor('|', 'badge bg-warning', 4)">Amarillo</button>
+    <button type="button" class="btn btn-success" onclick="addColor('|', 'badge bg-success', 5)">Verde</button>
+    <button type="button" class="btn btn-primary" onclick="addColor('|', 'badge bg-primary', 6)">Azul</button>
+    <button type="button" class="btn btn-purple" onclick="addColor('|', 'badge badge-purple', 7)">Violeta</button>
+    <button type="button" class="btn btn-secondary" onclick="addColor('|', 'badge bg-secondary', 8)">Gris</button>
+    <button type="button" class="btn btn-white" onclick="addColor('|', 'badge badge-white', 9)">Blanco</button>
+    <button type="button" class="btn btn-gold" onclick="addTolerance('|', 'badge badge-gold', 5)">Oro</button>
+    <button type="button" class="btn btn-silver" onclick="addTolerance('|', 'badge badge-silver', 10)">Plata</button>
 
     <!-- Icono SVG para eliminar el último color seleccionado -->
     <svg onclick="removeLastColor()" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
@@ -66,5 +66,15 @@
     <h2>Tolerancia: <span id="tolerance-value">N/A</span></h2>
   </div>
 </div>
+<br>
+<footer style="background-color: #000000; align-self: end; border-width: thin; border-radius: 100000px; border-color: #800080;">
+  <div class="container text-center">
+    <div class="row mt-5"></div>
+    <h2 style="color: #FFFFFF;">Urbina Meza Erick Moisés</h2>
+    <h2 style="color: #FFFFFF;">Vega Espino Rodolfo Julián</h2>
+    <h2 style="color: #FFFFFF;">Zamora Soto Bruno Rigoberto</h2>
+    <p style="color: #FFFFFF;">Sistemas Electrónicos para Informática - Dr. Noel García Díaz</p>
+  </div>
+ </footer>
 </body>
 </html>
