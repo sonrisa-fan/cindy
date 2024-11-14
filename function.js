@@ -32,6 +32,13 @@ function addColor(colorName, colorClass, colorValue) {
     colorTag.textContent = colorName;
     colorContainer.appendChild(colorTag);
     selectedCount++;
+
+    const middleImage = document.createElement('img');
+    middleImage.src = 'medio.jpeg';
+    middleImage.style.marginTop='5px';
+    middleImage.style.width = '10px';
+    middleImage.style.height = '50px';
+    colorContainer.appendChild(middleImage);
 }
 
 function addTolerance(colorName, colorClass, toleranceValue) {
